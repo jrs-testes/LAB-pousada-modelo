@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} | Pousada em Brasília</title>
+    <meta name="description" content="{{ page.description }}">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Fixo com CTA WhatsApp -->
+    <header class="site-header">
+        <div class="container header-content">
+            <div class="logo">{{ page.empresa_nome }}</div>
+            <a href="https://wa.me/{{ page.whatsapp }}" class="btn-whatsapp" target="_blank">
+                📱 Reservar pelo WhatsApp
+            </a>
+        </div>
+    </header>
+
+    {{ content }}
+
+    <!-- Footer com Dados Completos -->
+    <footer class="site-footer">
+        <div class="container">
+            <p><strong>Endereço:</strong> {{ page.endereco }}</p>
+            <p><strong>Horário:</strong> {{ page.horario }}</p>
+            <p>&copy; 2026 {{ page.empresa_nome }}. Site desenvolvido por Dr. José Spadeto.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true });
+    </script>
+</body>
+</html>
